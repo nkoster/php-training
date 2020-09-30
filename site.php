@@ -7,18 +7,11 @@
 </head>
 <body>
     <form action="./site.php" method="get">
-        Rose color: <input type="text" name="roseColor">
-        Plural noun: <input type="text" name="pluralNoun">
-        Celebrity: <input type="text" name="celebrity">
+        Password: <input type="password" name="password">
         <input type="submit">
     </form>
     <?php
-        $roseColor = $_GET["roseColor"];
-        $pluralNoun = $_GET["pluralNoun"];
-        $celebrity = $_GET["celebrity"];
-        echo "Roses are $roseColor<br>";
-        echo "$pluralNoun are blue<br>";
-        echo "I love $celebrity<br>"
+        echo $_GET["password"];
     ?>
 </body>
 </html>
