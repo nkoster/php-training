@@ -7,11 +7,10 @@
 </head>
 <body>
     <?php
-        function sayHello($name, $age) {
-            echo "Hello $name! You are $age<br>";
+        function cube($num) {
+            return pow($num, 3);
         }
-        sayHello("Aap", 51);
-        sayHello("Noot", 49);
+        echo cube(4);
     ?>
 </body>
 </html>
