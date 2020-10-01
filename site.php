@@ -7,10 +7,16 @@
 </head>
 <body>
     <?php
-        function cube($num) {
-            return pow($num, 3);
+        function getMax($n1, $n2, $n3) {
+            if ($n1 > $n2 && $n1 > $n3) {
+                return $n1;
+            }
+            if ($n2 > $n1 && $n2 > $n3) {
+                return $n2;
+            }
+            return $n3;
         }
-        echo cube(4);
+        echo getMax(1000, 200, 30);
     ?>
 </body>
 </html>
