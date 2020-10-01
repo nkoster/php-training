@@ -6,10 +6,17 @@
     <title>Document</title>
 </head>
 <body>
+    <form action="checkbox.php" method="post">
+        Apples: <input type="checkbox" name="fruits[]" value="apples"><br>
+        Oranges: <input type="checkbox" name="fruits[]" value="oranges"><br>
+        Pears: <input type="checkbox" name="fruits[]" value="pears"><br>
+        <input type="submit">
+    </form>
     <?php
-        $friends = array("keez", "danny", "kriz");
-        $friends[4] = "deniell";
-        echo count($friends);
+        $fruits = $_POST["fruits"];
+        for ($i=0; $i<count($fruits); $i++) {
+            echo "$fruits[$i]<br>";
+        }
     ?>
 </body>
 </html>
