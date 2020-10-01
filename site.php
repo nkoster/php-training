@@ -6,12 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="./site.php" method="post">
-        Password: <input type="password" name="password">
-        <input type="submit">
-    </form>
     <?php
-        echo $_POST["password"];
+        $friends = array("keez", "danny", "kriz");
+        $friends[4] = "deniell";
+        echo count($friends);
     ?>
 </body>
 </html>
