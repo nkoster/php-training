@@ -7,26 +7,24 @@
 </head>
 <body>
     <form action="site.php" method="post">
-        First number <input type="number" step="0.1" name="n1"><br>
-        Operator <input type="text" name="operator"><br>
-        Second number <input type="number" step="0.1" name="n2"><br>
+        Grade <input type="text" name="grade"><br>
         <input type="submit">
     </form>
     <?php
-        $op = $_POST["operator"];
-        $n1 = $_POST["n1"];
-        $n2 = $_POST["n2"];
-        echo "$n1 $op $n2 = ";
-        if ($op == "+") {
-            echo $n1 + $n2;
-        } elseif ($op == "-") {
-            echo $n1 - $n2;
-        } elseif ($op == "/") {
-            echo $n1 / $n2;
-        } elseif ($op == "*") {
-            echo $n1 * $n2;
-        } else {
-            echo "error";
+        $grade = $_POST["grade"];
+        echo "$grade<br>";
+        switch($grade) {
+            case "A":
+                echo "Amazing!";
+                break;
+            case "B":
+                echo "Okay";
+                break;
+            case "C":
+                echo "Come on";
+                break;
+            default:
+                echo "Serious?";
         }
     ?>
 </body>
