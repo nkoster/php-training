@@ -6,17 +6,28 @@
     <title>Document</title>
 </head>
 <body>
+    <form action="site.php" method="post">
+        First number <input type="number" step="0.1" name="n1"><br>
+        Operator <input type="text" name="operator"><br>
+        Second number <input type="number" step="0.1" name="n2"><br>
+        <input type="submit">
+    </form>
     <?php
-        function getMax($n1, $n2, $n3) {
-            if ($n1 > $n2 && $n1 > $n3) {
-                return $n1;
-            }
-            if ($n2 > $n1 && $n2 > $n3) {
-                return $n2;
-            }
-            return $n3;
+        $op = $_POST["operator"];
+        $n1 = $_POST["n1"];
+        $n2 = $_POST["n2"];
+        echo "$n1 $op $n2 = ";
+        if ($op == "+") {
+            echo $n1 + $n2;
+        } elseif ($op == "-") {
+            echo $n1 - $n2;
+        } elseif ($op == "/") {
+            echo $n1 / $n2;
+        } elseif ($op == "*") {
+            echo $n1 * $n2;
+        } else {
+            echo "error";
         }
-        echo getMax(1000, 200, 30);
     ?>
 </body>
 </html>
