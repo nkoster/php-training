@@ -7,27 +7,33 @@
 </head>
 <body>
 <?php
-class Student {
-    var $name;
-    var $major;
-    var $gpa;
-    function __construct($name, $major, $gpa) {
-        $this->name = $name;
-        $this->major = $major;
-        $this->gpa = $gpa;
+class Movie {
+    public $title;
+    private $rating;
+    function __construct($title, $rating) {
+        $this->title = $title;
+        $this->setRating($rating);
     }
-    function hasHonors() {
-        if ($this->gpa >= 3.5) {
-            return "true";
+    function getRating() {
+        return $this->rating;
+    }
+    function setRating($rating) {
+        if (
+            $rating == "G" ||
+            $rating == "PG" ||
+            $rating == "PG-13" ||
+            $rating == "R" ||
+            $rating == "NR"
+        ) {
+            $this->rating = $rating;
+        } else {
+            $this->rating = "NR";
         }
-        return "false";
     }
 }
-$student1 = new Student("Jaap", "IT", 3.4);
-$student2 = new Student("Henk", "Art", 3.6);
-echo "$student1->major<br>";
-echo $student1->hasHonors();
-echo $student2->hasHonors();
+$avengers = new Movie("Avangers", "PG-13");
+echo $avengers->getRating();
+
 ?>
 </body>
 </html>
