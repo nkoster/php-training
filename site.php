@@ -7,33 +7,27 @@
 </head>
 <body>
 <?php
-class Movie {
-    public $title;
-    private $rating;
-    function __construct($title, $rating) {
-        $this->title = $title;
-        $this->setRating($rating);
+
+class Chef {
+    function makeChicken() {
+        echo "Here's your chicken<br>";
     }
-    function getRating() {
-        return $this->rating;
+    function makeSalad() {
+        echo "Here's your salad<br>";
     }
-    function setRating($rating) {
-        if (
-            $rating == "G" ||
-            $rating == "PG" ||
-            $rating == "PG-13" ||
-            $rating == "R" ||
-            $rating == "NR"
-        ) {
-            $this->rating = $rating;
-        } else {
-            $this->rating = "NR";
-        }
+    function makeSpecialDish() {
+        echo "Here's your special dish<br>";
     }
 }
-$avengers = new Movie("Avangers", "PG-13");
-echo $avengers->getRating();
 
+class ItalianChef extends Chef {
+
+}
+
+$chef = new Chef();
+$chef->makeChicken();
+$fabio = new ItalianChef();
+$fabio->makeSalad();
 ?>
 </body>
 </html>
