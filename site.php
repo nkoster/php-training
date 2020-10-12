@@ -7,20 +7,27 @@
 </head>
 <body>
 <?php
-class Book {
-    var $title;
-    var $author;
-    var $pages;
-    function __construct($title, $author, $pages) {
-        $this->title = $title;
-        $this->author = $author;
-        $this->$pages = $pages;
+class Student {
+    var $name;
+    var $major;
+    var $gpa;
+    function __construct($name, $major, $gpa) {
+        $this->name = $name;
+        $this->major = $major;
+        $this->gpa = $gpa;
+    }
+    function hasHonors() {
+        if ($this->gpa >= 3.5) {
+            return "true";
+        }
+        return "false";
     }
 }
-$book1 = new Book("Harry Potter", "JK Rowling", 409);
-$book2 = new Book("Rings", "Tokien", 1000);
-echo "$book1->title<br>";
-echo "$book2->title<br>";
+$student1 = new Student("Jaap", "IT", 3.4);
+$student2 = new Student("Henk", "Art", 3.6);
+echo "$student1->major<br>";
+echo $student1->hasHonors();
+echo $student2->hasHonors();
 ?>
 </body>
 </html>
