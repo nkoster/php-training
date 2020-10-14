@@ -21,13 +21,16 @@ class Chef {
 }
 
 class ItalianChef extends Chef {
-
+    function makePasta() {
+        echo "Here's your pasta<br>";
+    }
 }
 
 $chef = new Chef();
 $chef->makeChicken();
 $fabio = new ItalianChef();
 $fabio->makeSalad();
+$fabio->makePasta();
 ?>
 </body>
 </html>
