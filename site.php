@@ -24,13 +24,18 @@ class ItalianChef extends Chef {
     function makePasta() {
         echo "Here's your pasta<br>";
     }
+    function makeSpecialDish() {
+        echo "Here's your special pasta<br>";
+    }
 }
 
 $chef = new Chef();
 $chef->makeChicken();
+$chef->makeSpecialDish();
 $fabio = new ItalianChef();
 $fabio->makeSalad();
 $fabio->makePasta();
+$fabio->makeSpecialDish();
 ?>
 </body>
 </html>
